@@ -1,0 +1,55 @@
+:root{
+  --prime-color: #AFABA2;
+  --letter-color:#FBFFFF;
+  --second-color:#C3C3C1;
+  --hover-color:#555;
+}
+
+body{
+  background-color: var(--prime-color);
+  font-family: 'IBM Plex Mono', monospace;
+}
+
+form h3{
+  font-size: 25px;
+  font-weight: bold;
+  padding-top:20px;
+}
+
+input{
+  font-family: 'IBM Plex Mono', monospace;
+  margin-top: 15px;
+  font-size: 12px;
+  height: 30px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
+}
+
+button{
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: bold;
+  border-radius: 6px;
+  border: none;
+  margin-top:15px;
+  width: 90px;
+  height: 25px;
+  cursor: pointer;
+}
+
+button:hover{
+  color: var(--hover-color);
+}
+
+a{
+  color: var(--letter-color);
+}
+
+/* a:hover{
+  color: var(--second-color);
+  
+} */
+
+/* a:visited{
+  color: rgb(177, 172, 172);
+} */

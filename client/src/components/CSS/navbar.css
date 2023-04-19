@@ -1,0 +1,159 @@
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  color: var(--letter-color);
+  font-size: 30px;
+  margin: 0 1rem;
+}
+
+.nav-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60%;
+  /* padding: 0 1rem; */
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  /* justify-content: center; */
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li {
+  margin-right: 1rem;
+
+}
+
+.nav-link {
+  text-decoration: none;
+  color: var(--letter-color);
+  font-size: 16px;
+  margin: 0 20px;
+}
+
+.nav-link:hover {
+  color: var(--hover-color);
+}
+
+.hamburger-icon{
+  font-size: 20px;
+  margin-left: 380px;
+  margin-right: -490px;
+  color: var(--letter-color);
+  cursor: pointer;
+  position: relative;
+}
+
+.hamburger-icon:hover{
+  color: var(--hover-color);
+}
+
+.account-icon{
+  position: relative;
+  font-size: 20px;
+  margin-left: 310px;
+  margin-right: -360px;
+  color: var(--letter-color);
+  cursor: pointer;
+}
+
+.account-icon:hover{
+  color: var(--hover-color);
+}
+
+
+/* ---------- drop down account icon ----------*/
+
+
+.account-icon .acct-drop-down {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  width: 90px;
+  margin-top: 5px;
+  padding: 10px;
+  background-color: var(--second-color);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+  display: none;
+  font-size: 16px;
+  transition: all 0.2s ease;
+  
+  
+}
+
+.account-icon:hover .acct-drop-down {
+  display: block;
+}
+
+.account-icon .acct-drop-down li {
+  list-style: none;
+  margin-bottom: 5px;
+}
+
+.account-icon .acct-drop-down li a {
+  text-decoration: none;
+  color: var(--letter-color);
+}
+
+.account-icon .acct-drop-down li a:hover {
+  color: var(--hover-color);
+}
+
+
+
+/* ---------- screen adjustment ---------- */
+@media only screen and (max-width: 600px) {
+  nav .rightSide a {
+    display: none;
+  }
+
+  nav .rightSide {
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+
+  nav .rightSide button {
+    display: inherit;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  /* adjust margin for smaller screens */
+  .hamburger-icon {
+    margin-left: 10px;
+  }
+
+  .account-icon {
+    margin-right: 10px;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  /* adjust margin for even smaller screens */
+  .hamburger-icon {
+    margin-left: 5px;
+  }
+
+  .account-icon {
+    margin-right: 5px;
+  }
+}
+
+
+
+
+
+
+
