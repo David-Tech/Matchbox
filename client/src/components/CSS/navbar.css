@@ -1,8 +1,12 @@
-nav {
-  position: fixed;
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
   top: 0;
   left: 0;
-  width: 100%;
+  position: fixed;
 }
 
 .navbar-brand {
@@ -12,143 +16,206 @@ nav {
   margin: 0 1rem;
 }
 
-.nav-wrapper {
+.navbar .leftSide {
+  flex: 50%;
+  height: 100%;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  width: 60%;
-  /* padding: 0 1rem; */
+  padding-left: 50px;
 }
 
-.nav-list {
+.navbar .leftSide .navbar-brand {
+  width: 70px;
+}
+
+.navbar .rightSide {
+  flex: 50%;
+  height: 100%;
   display: flex;
-  list-style: none;
-  /* justify-content: center; */
-  margin: 0;
-  padding: 0;
+  align-items: center;
+  justify-content: center;
 }
 
-.nav-list li {
-  margin-right: 1rem;
-
-}
-
-.nav-link {
-  text-decoration: none;
+.navbar a {
   color: var(--letter-color);
-  font-size: 16px;
-  margin: 0 20px;
+  text-decoration: none;
+  margin: 20px;
 }
 
-.nav-link:hover {
-  color: var(--hover-color);
-}
-
-.hamburger-icon{
-  font-size: 20px;
-  margin-left: 380px;
-  margin-right: -490px;
+.navbar .rightSide button {
+  background-color: transparent;
+  border: none;
   color: var(--letter-color);
   cursor: pointer;
-  position: relative;
+}
+
+.navbar .rightSide .hamburger-icon {
+  font-size: 25px;
+}
+
+.navbar #open {
+  padding-left: 0px;
+}
+
+.navbar #open .navbar-brand {
+  display: none;
+}
+
+.navbar #close .navbar-brand {
+  display: inherit;
+}
+
+.navbar #open .hiddenLinks {
+  display: inherit;
+  margin-left: 20px;
+}
+
+.navbar #close .hiddenLinks {
+  display: none;
+}
+
+.navbar #open a {
+  width: 70px;
+  margin: 5px;
+}
+
+/* side menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--side-menu-background-color);
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.show-menu {
+  left: 0;
+}
+
+.menu-link {
+  display: block;
+  padding: 20px;
+  color: var(--letter-color);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.menu-link:hover {
+  background-color: var(--hover-color);
+}
+
+.menu-link svg {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* -------- screen adjustments --------*/
+@media only screen and (max-width: 900px) {
+  .navbar .rightSide a {
+    width: 70px;
+  }
+  .navbar .leftSide {
+    padding-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar .rightSide a {
+    display: none;
+  }
+
+  .navbar .rightSide {
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+
+  .navbar .rightSide button {
+    display: inherit;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar .rightSide button {
+    display: none;
+  }
+
+  .hiddenLinks {
+    display: none;
+  }
+}
+
+/* --------- icons --------- */
+.hamburger-icon{
+  font-size: 20px;
+  color: var(--letter-color);
+  cursor: pointer;
+  /* position: relative; */
 }
 
 .hamburger-icon:hover{
   color: var(--hover-color);
 }
 
-.account-icon{
-  position: relative;
-  font-size: 20px;
-  margin-left: 310px;
-  margin-right: -360px;
-  color: var(--letter-color);
-  cursor: pointer;
+
+.house-icon:hover{
+  color: var(--hover-color);
 }
 
-.account-icon:hover{
+.heart-icon:hover{
+  color: var(--hover-color);
+}
+
+.about-icon:hover{
+  color: var(--hover-color);
+}
+
+.profile-icon:hover{
+  color: var(--hover-color);
+}
+
+.upload-icon:hover{
   color: var(--hover-color);
 }
 
 
-/* ---------- drop down account icon ----------*/
+/* ------ profile dropdown --------- */
 
 
-.account-icon .acct-drop-down {
-  position: absolute;
-  top: 100%;
-  right: 0;
-  width: 90px;
-  margin-top: 5px;
-  padding: 10px;
-  background-color: var(--second-color);
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
   display: none;
-  font-size: 16px;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--second-color);
+  min-width: 130px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  padding: 2px 10px;
+  border-radius: 8px;
   transition: all 0.2s ease;
-  
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
   
 }
 
-.account-icon:hover .acct-drop-down {
+.dropdown-content a {
+  color: black;
+  padding: 5px 0;
+  text-decoration: none;
   display: block;
 }
 
-.account-icon .acct-drop-down li {
-  list-style: none;
-  margin-bottom: 5px;
-}
-
-.account-icon .acct-drop-down li a {
-  text-decoration: none;
-  color: var(--letter-color);
-}
-
-.account-icon .acct-drop-down li a:hover {
-  color: var(--hover-color);
-}
-
-
-
-/* ---------- screen adjustment ---------- */
-@media only screen and (max-width: 600px) {
-  nav .rightSide a {
-    display: none;
-  }
-
-  nav .rightSide {
-    justify-content: flex-end;
-    padding-right: 50px;
-  }
-
-  nav .rightSide button {
-    display: inherit;
-  }
-}
-
-
-@media only screen and (max-width: 768px) {
-  /* adjust margin for smaller screens */
-  .hamburger-icon {
-    margin-left: 10px;
-  }
-
-  .account-icon {
-    margin-right: 10px;
-  }
-}
-
-@media only screen and (max-width: 480px) {
-  /* adjust margin for even smaller screens */
-  .hamburger-icon {
-    margin-left: 5px;
-  }
-
-  .account-icon {
-    margin-right: 5px;
-  }
+.dropdown-content a:hover {
+  /* background-color: #ddd; */
+  color: var(--prime-color);
 }
 
 
@@ -156,4 +223,9 @@ nav {
 
 
 
+/* ----------- hamburger side menu -----------  */
+
+.side-menu{
+  display:none;
+}
 

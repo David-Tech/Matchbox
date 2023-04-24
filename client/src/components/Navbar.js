@@ -1,74 +1,125 @@
-import React, { useState } from 'react';
-// import './App.css';
-import './CSS/navbar.css';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "./CSS/navbar.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faHeart, faHouse , faUser} from '@fortawesome/free-solid-svg-icons';
+
+import { 
+   faBars, 
+   faHeart, 
+   faHouse, 
+   faUser, 
+   faCircleInfo,
+   faFileArrowUp
+ } from '@fortawesome/free-solid-svg-icons';
+
 
 function Navbar() {
-   const [openLinks, setOpenLinks] = useState(false);
- 
-   const toggleNavbar = () => {
-     setOpenLinks(!openLinks);
-   };
-   return (
-     <nav>
-      <div className="nav-wrapper" >
-         <Link className="navbar-brand" to={'/Home'}> 
+  const [openLinks, setOpenLinks] = useState(false);
+
+  const toggleNavbar = () => {
+    setOpenLinks(!openLinks);
+  };
+  
+
+  // dropdown menu
+   const [showDropMenu, setDropMenu] = useState(false);
+    const toggleDropMenu = () => {
+    setDropMenu(!showDropMenu);
+  };
+
+  // sidebar
+  const [showMenu, setShowMenu] = useState(false);
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  };
+
+
+  return (
+    <div className="navbar">
+      <div className="leftSide" id={openLinks ? "open" : "close"}>
+         <Link className="navbar-brand" to={'/'}> 
             MatchBox
          </Link>
-         <ul className="nav-list">
-            <li>
-            <Link className="nav-link" to={'/Home'}>
-               <FontAwesomeIcon icon={faHouse} /> Home
-            </Link>
-            </li>
-            
-            <li>
-            <Link className="nav-link" to={'/Likes'}>
-               <FontAwesomeIcon icon={faHeart} /> Likes
-            </Link>
-            </li>
-   
-            <li>
-            <Link className="nav-link" to={'/Upload'}>
-               Upload
-            </Link>
-            </li>
-   
-            <li>
-            <Link className="nav-link" to={'/about'}>
-               About
-            </Link>
-            </li>
-   
-            {/* drop down menu for account icon */}
-     
-            <div className ="account-icon" >
-               <FontAwesomeIcon icon={faUser} />
-               <ul className = "acct-drop-down">
-                  <li>
-                     <Link to="/profile">Profile</Link>
-                  </li>
-                  <li>
-                     <Link to="/signup">Sign up</Link>
-                  </li>
-                  <li>
-                  <Link to="/login">Login</Link>
-                  </li>
-               </ul>
-            
-            </div>
 
-            {/* expand collapse  */}
-            <div className = "hamburger-icon">            
-               <FontAwesomeIcon icon={faBars} /> 
-            </div>
-         </ul>
+        {/* hamburger menu */}
+        <div className="hiddenLinks">
+          <Link to="/" className = "house-icon"> <FontAwesomeIcon icon={faHouse} /></Link>
+          <Link to="/likes" className = "heart-icon" > <FontAwesomeIcon icon={faHeart} /></Link>
+          <Link to="/upload" className = "upload-icon"> <FontAwesomeIcon icon={faFileArrowUp} /> Upload </Link>
+          <Link to="/profile" className = "profile-icon"><FontAwesomeIcon icon={faUser}/> Profile</Link>
+         
+        </div>
       </div>
-   </nav>
-   );
- }
- 
- export default Navbar;
+
+        {/* links for navbar */}
+      <div className="rightSide">
+        <Link to="/" className = "house-icon"> <FontAwesomeIcon icon={faHouse} /> Home </Link>
+        <Link to="/likes" className = "heart-icon" > <FontAwesomeIcon icon={faHeart} /> Likes </Link>
+        <Link to="/upload" className = "upload-icon"> <FontAwesomeIcon icon={faFileArrowUp} /> Upload </Link>
+
+        <Link to="/profile" className="profile-icon dropdown">
+          <FontAwesomeIcon icon={faUser}/> Profile
+          <div className="dropdown-content">
+            <Link to="/profile/edit">Edit Profile</Link>
+            <Link to="/profile/settings">Profile Settings</Link>
+            <Link to="/profile/logout">Logout</Link>
+           </div>
+        </Link>
+
+
+
+        {/* <Link to="/profile" className = "profile-icon"><FontAwesomeIcon icon={faUser}/> Profile
+        </Link>
+        <ul className = "acct-drop-down">
+            <li>
+              <Link to="/signup">Sign up</Link>
+            </li>
+            <li>
+              <Link to="/login">Login</Link>
+            </li>
+        </ul> */}
+        {/* profile drop down */}
+    
+          
+
+
+        {/* <Link to="/about" className = "about-icon"><FontAwesomeIcon icon={faCircleInfo}/> About </Link> */}
+    
+  
+        <button onClick={toggleNavbar}>
+         <FontAwesomeIcon className ="hamburger-icon" icon={faBars} /> 
+        </button>
+
+
+      {/* side menu */}
+      <div className={`side-menu ${openLinks ? 'show' : ''}`}>
+        <Link to="/" className="menu-link" onClick={toggleNavbar}>
+          <FontAwesomeIcon icon={faHouse} /> Home
+        </Link>
+        <Link to="/likes" className="menu-link" onClick={toggleNavbar}>
+          <FontAwesomeIcon icon={faHeart} /> Likes
+        </Link>
+        <Link to="/upload" className="menu-link" onClick={toggleNavbar}>
+          <FontAwesomeIcon icon={faFileArrowUp} /> Upload
+        </Link>
+        <Link to="/profile" className="menu-link" onClick={toggleNavbar}>
+          <FontAwesomeIcon icon={faUser} /> Profile
+        </Link>
+        <Link to="/about" className="menu-link" onClick={toggleNavbar}>
+          <FontAwesomeIcon icon={faCircleInfo} /> About
+        </Link>
+      </div>
+
+
+
+      </div>
+
+    </div>
+  );
+}
+
+export default Navbar;
+
+
  

@@ -24,7 +24,7 @@ function App() {
           <Route path="/home" element={<Home />} />
           <Route path="/likes" element={<Likes />} />
           <Route path="/upload" element={<Upload />} />
-          {/* <Route path="/about" element={<About />} /> */}
+          <Route path="/about" element={<About />} />
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/userDetails" element={<UserDetails />} />
