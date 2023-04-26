@@ -29,7 +29,7 @@ export default class SignUp extends Component {
     const { age, fname, lname, email, password, verfiypwd } = this.state;
     console.log(age, fname, lname, email, password, verfiypwd);
 
-    fetch("http://localhost:3000/register", {
+    fetch("http://localhost:5000/register", {
       method: "POST",
       crossDomain: true,
 
