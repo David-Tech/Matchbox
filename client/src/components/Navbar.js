@@ -107,23 +107,23 @@ function Navbar() {
 
 
       {/* side menu */}
-      <div className={`side-menu ${openLinks ? 'show' : ''}`}>
-        <Link to="/" className="menu-link" onClick={toggleNavbar}>
-          <FontAwesomeIcon icon={faHouse} /> Home
-        </Link>
-        <Link to="/likes" className="menu-link" onClick={toggleNavbar}>
-          <FontAwesomeIcon icon={faHeart} /> Likes
-        </Link>
-        <Link to="/upload" className="menu-link" onClick={toggleNavbar}>
-          <FontAwesomeIcon icon={faFileArrowUp} /> Upload
-        </Link>
-        <Link to="/" className="menu-link" onClick={toggleNavbar}>
-          <FontAwesomeIcon icon={faUser} /> Profile
-        </Link>
-        <Link to="/about" className="menu-link" onClick={toggleNavbar}>
-          <FontAwesomeIcon icon={faCircleInfo} /> About
-        </Link>
-      </div>
+        <div className={`side-menu ${openLinks ? 'show' : ''}`}>
+          <Link to="/" className="menu-link" onClick={toggleNavbar}>
+            <FontAwesomeIcon icon={faHouse} /> Home
+          </Link>
+          <Link to="/likes" className="menu-link" onClick={toggleNavbar}>
+            <FontAwesomeIcon icon={faHeart} /> Likes
+          </Link>
+          <Link to="/upload" className="menu-link" onClick={toggleNavbar}>
+            <FontAwesomeIcon icon={faFileArrowUp} /> Upload
+          </Link>
+          <Link to="/" className="menu-link" onClick={toggleNavbar}>
+            <FontAwesomeIcon icon={faUser} /> Profile
+          </Link>
+          <Link to="/about" className="menu-link" onClick={toggleNavbar}>
+            <FontAwesomeIcon icon={faCircleInfo} /> About
+          </Link>
+        </div>
       </div>
 
     </div>
