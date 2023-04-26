@@ -37,13 +37,16 @@ function Navbar() {
     setOpenLinks(!openLinks);
   };
 
+  const handleDropdownClick = (event) => {
+    event.stopPropagation();
+  };
+
+
+  // sidemenu
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   };
 
-  const handleDropdownClick = (event) => {
-    event.stopPropagation();
-  };
 
   return (
     <div className="navbar">
