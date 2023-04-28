@@ -9,7 +9,6 @@
    margin-top: 80px;
  }
 
-
 .signup-button{
    color: var(--prime-color);
    margin-left: 100px;
@@ -30,4 +29,24 @@
 
 .account-msg{
   font-size: 14px;
+}
+
+/* --------- pwd eye icon --------- */
+
+.password-container {
+  position: relative;
+}
+
+.password-input {
+  padding-right: 5px; /* to leave space for the icon */
+}
+
+.pwd-eye-icon {
+  position: absolute;
+  top: 50%;
+  /* right: 5px; */
+  transform: translateY(-2%);
+  transform: translateX(-130%);
+  cursor: pointer;
+  color: var(--prime-color);
 }

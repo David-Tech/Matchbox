@@ -7,4 +7,15 @@
    top: 50%;
    left: 50%;
    transform: translate(-200%, -100%);
+ }
+
+
+ .body-home{
+  text-align: center;
+  color: var(--letter-color);
+  margin: 150px;
+}
+
+.sign-color:hover{
+  color: var(--hover-color);
 }

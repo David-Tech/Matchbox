@@ -1,9 +1,13 @@
 import React from 'react'
-
+import "../CSS/profile.css";
 function Profile() {
   return (
-    <div>Profile</div>
+    <>
+    <div className = "profile-body">prompts</div>
+
+    </>
     
+
   )
 }
 

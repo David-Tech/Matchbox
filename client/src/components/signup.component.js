@@ -2,6 +2,9 @@ import React, { Component, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom';
 import './CSS/signup.css'
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons"
+
 export default class SignUp extends Component {
   constructor(props) {
     super(props);
@@ -12,12 +15,16 @@ export default class SignUp extends Component {
       email: "",
       password: "",
       verfiypwd: "",
-      val: "" // added this line to initialize val in state
+      val: "", // added this line to initialize val in state
+      showPassword: false,
+      showVerifyPwd: false
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   handleChange = (e) => {
+
+    
     const regex = /^[0-9\b]+$/;
     if (e.target.value === "" || regex.test(e.target.value)) {
       this.setState({ val: e.target.value });
@@ -28,6 +35,11 @@ export default class SignUp extends Component {
     event.preventDefault();
     const { age, fname, lname, email, password, verfiypwd } = this.state;
     console.log(age, fname, lname, email, password, verfiypwd);
+
+    if (password !== verfiypwd) {
+      alert("Passwords do not match. Please try again.");
+      return;
+    }
 
     fetch("http://localhost:5000/register", {
       method: "POST",
@@ -52,9 +64,16 @@ export default class SignUp extends Component {
         console.log(data, "userRegister");
       });
   }
-  
+
+// show pwd
+  toggleShowPassword = (input) => {
+    this.setState((prevState) => ({
+      [input]: !prevState[input],
+    }));
+  };
+
   render() {
-    const { val } = this.state; // added this line to get val from state
+    const { val, showPassword, showVerifyPwd } = this.state; // added this line to get val from state
 
     return (
       <form className="signup-form" onSubmit={this.handleSubmit}>
@@ -98,21 +117,31 @@ export default class SignUp extends Component {
           />
         </div>
 
-        <div>
+        <div className="password-container">
           <input
-            type="password"
-            className="form-control"
+            type={showPassword ? "text" : "password"}
+            className="form-control password-input"
             placeholder="Password"
             onChange={(e) => this.setState({ password: e.target.value })}
           />
+          <FontAwesomeIcon 
+            className="pwd-eye-icon"
+            icon={showPassword ? faEye : faEyeSlash}
+            onClick={() => this.toggleShowPassword("showPassword")}
+          />
         </div>
 
-        <div>
+        <div className="password-container">
           <input
-            type="password"
-            className="form-control"
+            type={ showVerifyPwd ? "text" : "password"}
+            className="form-control password-input"
             placeholder="Verify password"
             onChange={(e) => this.setState({ verfiypwd: e.target.value })}
+          />
+          <FontAwesomeIcon 
+            className="pwd-eye-icon"
+            icon={showVerifyPwd ? faEye : faEyeSlash}
+            onClick={() => this.toggleShowPassword("showVerifyPwd")}
           />
         </div>
 
@@ -126,7 +155,6 @@ export default class SignUp extends Component {
         <p className="account-msg">
           Already have an account?{" "}
           <Link className="sign-color" to="/login">Login</Link>
-  
         </p>
       </form>
     );
