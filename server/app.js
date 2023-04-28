@@ -46,7 +46,6 @@ app.post("/post", async(req,res) =>{
     }catch(error){
         res.send({status:"something went wrong"});
     }
-
 });
 
 

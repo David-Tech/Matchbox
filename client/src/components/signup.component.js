@@ -9,7 +9,7 @@ export default class SignUp extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      age: 0,
+      age: "",
       fname: "",
       lname: "",
       email: "",
@@ -23,11 +23,9 @@ export default class SignUp extends Component {
   }
 
   handleChange = (e) => {
-
-    
     const regex = /^[0-9\b]+$/;
     if (e.target.value === "" || regex.test(e.target.value)) {
-      this.setState({ val: e.target.value });
+      this.setState({ age: e.target.value });
     }
   };
 
@@ -73,7 +71,7 @@ export default class SignUp extends Component {
   };
 
   render() {
-    const { val, showPassword, showVerifyPwd } = this.state; // added this line to get val from state
+    const { age, showPassword, showVerifyPwd } = this.state; // added this line to get val from state
 
     return (
       <form className="signup-form" onSubmit={this.handleSubmit}>
@@ -81,9 +79,10 @@ export default class SignUp extends Component {
 
         <div>
           <input
-            type="number"
+            type="text"
             className="form-control"
-            value={val}
+            value={age}
+            min = "18"
             onChange={this.handleChange} // corrected this line
             placeholder="Age (18 or older)"
             // onChange={(e) => this.setState({ age: e.target.value })}
