@@ -71,7 +71,7 @@ export default class SignUp extends Component {
   };
 
   render() {
-    const { age, showPassword, showVerifyPwd } = this.state; // added this line to get val from state
+    const { age, showPassword, showVerifyPwd } = this.state; 
 
     return (
       <form className="signup-form" onSubmit={this.handleSubmit}>
