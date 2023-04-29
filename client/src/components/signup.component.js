@@ -21,14 +21,14 @@ export default class SignUp extends Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
+/* Handle Change not neeeded due to html input tag "min" parameter
   handleChange = (e) => {
     const regex = /^[0-9\b]+$/;
     if (e.target.value === "" || regex.test(e.target.value)) {
       this.setState({ age: e.target.value });
     }
   };
-
+*/
   handleSubmit(event) {
     event.preventDefault();
     const { age, fname, lname, email, password, verfiypwd } = this.state;
@@ -60,6 +60,7 @@ export default class SignUp extends Component {
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "userRegister");
+        window.location.href="./login";
       });
   }
 
@@ -79,13 +80,13 @@ export default class SignUp extends Component {
 
         <div>
           <input
-            type="text"
+            type="number"
             className="form-control"
             value={age}
             min = "18"
-            onChange={this.handleChange} // corrected this line
+            //onChange={this.handleChange}
             placeholder="Age (18 or older)"
-            // onChange={(e) => this.setState({ age: e.target.value })}
+            onChange={(e) => this.setState({ age: e.target.value })}
           />
         </div>
 
