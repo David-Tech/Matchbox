@@ -1,0 +1,258 @@
+.navbar {
+  width: 100%;
+  height: 80px;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+.navbar-brand {
+  text-decoration: none;
+  color: var(--letter-color);
+  font-size: 30px;
+  margin: 0 1rem;
+}
+
+.navbar .leftSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 50px;
+}
+
+.navbar .leftSide .navbar-brand {
+  width: 70px;
+}
+
+.navbar .rightSide {
+  flex: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar a {
+  color: var(--letter-color);
+  text-decoration: none;
+  margin: 20px;
+}
+
+.navbar .rightSide button {
+  background-color: transparent;
+  border: none;
+  color: var(--letter-color);
+  cursor: pointer;
+}
+
+.navbar .rightSide .hamburger-icon {
+  font-size: 25px;
+}
+
+.navbar #open {
+  padding-left: 0px;
+}
+
+.navbar #open .navbar-brand {
+  display: none;
+}
+
+.navbar #close .navbar-brand {
+  display: inherit;
+}
+
+.navbar #open .hiddenLinks {
+  display: inherit;
+  margin-left: 20px;
+}
+
+.navbar #close .hiddenLinks {
+  display: none;
+}
+
+.navbar #open a {
+  width: 70px;
+  margin: 5px;
+}
+
+/* side menu */
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -250px;
+  width: 250px;
+  height: 100%;
+  background-color: var(--side-menu-background-color);
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.show-menu {
+  left: 0;
+}
+
+.menu-link {
+  display: block;
+  padding: 20px;
+  color: var(--letter-color);
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.menu-link:hover {
+  background-color: var(--hover-color);
+}
+
+.menu-link svg {
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* -------- screen adjustments --------*/
+@media only screen and (max-width: 900px) {
+  .navbar .rightSide a {
+    width: 70px;
+  }
+  .navbar .leftSide {
+    padding-left: 50px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar .rightSide a {
+    display: none;
+  }
+
+  .navbar .rightSide {
+    justify-content: flex-end;
+    padding-right: 50px;
+  }
+
+  .navbar .rightSide button {
+    display: inherit;
+  }
+
+  .navbar .rightSide .profile-icon{
+    display: none;
+  }
+
+  .navbar .hiddenLinks .profile-icon {
+    display: inherit;
+  }
+  .navbar .hiddenLinks .dropdown {
+    display: inherit;
+    position: static;
+    margin-top: 10px;
+  }
+  .navbar .hiddenLinks .dropdown .dropdown-content {
+    top: 100%;
+    left: 0;
+  }
+  
+}
+
+@media only screen and (min-width: 600px) {
+  .navbar .rightSide button {
+    display: none;
+  }
+
+  .hiddenLinks {
+    display: none;
+  }
+
+  /* .profile-icon{
+    display: none;
+  } */
+
+  /* add sidemenu here? */
+  .side-menu{
+    /* background-color: var(--second-color); */
+  }
+}
+
+/* --------- icons --------- */
+.hamburger-icon{
+  font-size: 20px;
+  color: var(--letter-color);
+  cursor: pointer;
+  /* position: relative; */
+}
+
+.hamburger-icon:hover{
+  color: var(--hover-color);
+}
+
+
+.house-icon:hover{
+  color: var(--hover-color);
+}
+
+.heart-icon:hover{
+  color: var(--hover-color);
+}
+
+.about-icon:hover{
+  color: var(--hover-color);
+}
+
+.profile-icon:hover{
+  color: var(--hover-color);
+}
+
+.upload-icon:hover{
+  color: var(--hover-color);
+}
+
+
+/* ------ profile dropdown --------- */
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  color: var(--letter-color);
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  background-color: var(--second-color);
+  min-width: 130px;
+  /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+  padding: 1px 10px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  line-height: 1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+  padding: 0px 2px;
+}
+
+.dropdown-content a {
+  color: var(--letter-color);
+  padding: 5px 0;
+  text-decoration: none;
+  display: block;
+  white-space: nowrap;  /* puts words in one line  */
+}
+
+.dropdown-content a:hover {
+  /* background-color: #ddd; */
+  color: var(--hover-color);
+}
+
+
+
+/* ----------- hamburger side menu -----------  */
+
+.side-menu{
+  display:none;
+}
+

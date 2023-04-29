@@ -1,0 +1,32 @@
+
+.body-about{
+   height: 50vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.container {
+   position: relative;
+   text-align: center;
+ }
+ 
+ .box {
+   position: absolute;
+   width: 100px;
+   height: 100px;
+   border-radius: 8px;
+ }
+ 
+ .box1 {
+   background-color: var(--second-color);;
+   left: 0;
+   top: 0;
+ }
+ 
+ .box2 {
+   background-color:var(--second-color);;
+   left: 50px;
+   top: 40px;
+ }
+ 

@@ -1,0 +1,29 @@
+.login-form{
+   text-align: center;
+   background-color: var(--second-color);
+   width: 500px;
+   height: 400px;
+   margin: auto;
+   border-radius: 10px;
+   color: var(--letter-color);
+   margin-top: 80px;
+}
+
+
+.check-input{
+   width: 10px;
+   height: 10px;
+}
+
+.rmbr-label{
+   margin-left: 5px;
+   font-size: 14px;
+}
+
+.forgot-pwd{
+   font-size: 14px;
+   display: flex;
+   justify-content: right;
+   margin-right: 10px;
+   margin-top: 120px;
+}
