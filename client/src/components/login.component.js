@@ -36,6 +36,9 @@ export default class Login extends Component {
     window.localStorage.setItem("loggedIn", true);
     window.location.href="./UserDetails";
     }
+    else{
+      alert("Username or Password Incorrect!")
+    }
   })
   }
   render() {
