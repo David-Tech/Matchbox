@@ -1,6 +1,6 @@
 # Dating-App
 
-## In order to run locally install the following:   
+## In order to run locally install the following using terminal:   
 
 **install to client folder:**   
 npm install react-scripts --save   
