@@ -48,6 +48,7 @@ const Upload = () => {
         <label>
           Location:
           <input type="text" onChange={handleLocationChange} />
+  
         </label>
         <br />
         <button type="submit">Upload</button>

@@ -7,8 +7,9 @@ function Profile() {
       <div className="profile-body">
       <h3>Deal Breakers</h3>
         <ul className ="prompts-body">
-          <li> What are your favorite hobbies?</li> 
-          <input></input>
+          <li> What are your favorite hobbies?    <input className="input-color"></input>
+          </li> 
+      
           <li>What is your favorite food or restaurant</li>
           <li></li>
         </ul>
@@ -20,8 +21,6 @@ function Profile() {
           <li>Are there any political views that would be a deal breaker for you?</li>
         </ul>
       </div>
-
-
     </>
   );
 }
