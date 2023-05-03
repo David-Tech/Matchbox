@@ -3,8 +3,6 @@
 ## In order to run locally install the following using terminal:   
 
 **install to client folder:**
-
-npm install
 npm install react-scripts --save   
 npm install --save @fortawesome/free-solid-svg-icons   
 npm install --save @fortawesome/react-fontawesome   
