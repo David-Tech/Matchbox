@@ -13,7 +13,9 @@ import Home from './components/pages/Home';
 import Likes from './components/pages/Likes';
 import Upload from './components/pages/Upload';
 import Profile from './components/pages/Profile';
+import Settings from './components/pages/Settings';
 import About from './components/pages/About';
+
 
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
@@ -32,6 +34,8 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile/edit" element={<Profile />} />
+          <Route path="/profile/settings" element={<Settings />} />
+
           <Route path="/userDetails" element={<UserDetails />} />
         </Routes>
 
