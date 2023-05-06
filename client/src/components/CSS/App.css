@@ -16,7 +16,7 @@ form h3{
   padding-top:20px;
 }
 
-input{
+/* input{
   font-family: 'IBM Plex Mono', monospace;
   margin-top: 15px;
   font-size: 12px;
@@ -24,7 +24,7 @@ input{
   width: 300px;
   border-radius: 10px;
   border: none;
-}
+} */
 
 button{
   font-family: 'IBM Plex Mono', monospace;
