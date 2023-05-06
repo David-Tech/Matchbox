@@ -27,3 +27,14 @@
    margin-right: 10px;
    margin-top: 120px;
 }
+
+
+.login-input{
+   font-family: 'IBM Plex Mono', monospace;
+   margin-top: 15px;
+   font-size: 12px;
+   height: 30px;
+   width: 300px;
+   border-radius: 10px;
+   border: none;
+ }

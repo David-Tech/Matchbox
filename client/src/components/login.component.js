@@ -50,7 +50,7 @@ export default class Login extends Component {
           {/* <label>Email address</label> */}
           <input
             type="email"
-            className="form-control"
+            className="form-control login-input"
             placeholder="Enter email"
             onChange={e=>this.setState({email:e.target.value})}
           />
@@ -60,7 +60,7 @@ export default class Login extends Component {
           {/* <label>Password</label> */}
           <input
             type="password"
-            className="form-control"
+            className="form-control login-input"
             placeholder="Enter password"
             onChange={e=>this.setState({password:e.target.value})}
           />

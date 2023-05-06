@@ -81,7 +81,7 @@ export default class SignUp extends Component {
         <div>
           <input
             type="number"
-            className="form-control"
+            className="form-control signup-input"
             value={age}
             min = "18"
             //onChange={this.handleChange}
@@ -93,7 +93,7 @@ export default class SignUp extends Component {
         <div>
           <input
             type="text"
-            className="form-control"
+            className="form-control signup-input"
             placeholder="First name"
             onChange={(e) => this.setState({ fname: e.target.value })}
           />
@@ -102,7 +102,7 @@ export default class SignUp extends Component {
         <div>
           <input
             type="text"
-            className="form-control"
+            className="form-control signup-input"
             placeholder="Last name"
             onChange={(e) => this.setState({ lname: e.target.value })}
           />
@@ -111,7 +111,7 @@ export default class SignUp extends Component {
         <div>
           <input
             type="email"
-            className="form-control"
+            className="form-control signup-input"
             placeholder="Email"
             onChange={(e) => this.setState({ email: e.target.value })}
           />
@@ -120,7 +120,7 @@ export default class SignUp extends Component {
         <div className="password-container">
           <input
             type={showPassword ? "text" : "password"}
-            className="form-control password-input"
+            className="form-control password-input signup-input"
             placeholder="Password"
             onChange={(e) => this.setState({ password: e.target.value })}
           />
@@ -134,7 +134,7 @@ export default class SignUp extends Component {
         <div className="password-container">
           <input
             type={ showVerifyPwd ? "text" : "password"}
-            className="form-control password-input"
+            className="form-control password-input signup-input"
             placeholder="Verify password"
             onChange={(e) => this.setState({ verfiypwd: e.target.value })}
           />
