@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Matchbox/static/css/main.afb3ab59.css",
+    "main.js": "/Matchbox/static/js/main.90708322.js",
+    "static/js/787.1257cef4.chunk.js": "/Matchbox/static/js/787.1257cef4.chunk.js",
+    "index.html": "/Matchbox/index.html",
+    "main.afb3ab59.css.map": "/Matchbox/static/css/main.afb3ab59.css.map",
+    "main.90708322.js.map": "/Matchbox/static/js/main.90708322.js.map",
+    "787.1257cef4.chunk.js.map": "/Matchbox/static/js/787.1257cef4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.afb3ab59.css",
+    "static/js/main.90708322.js"
+  ]
+}
