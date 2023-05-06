@@ -24,7 +24,7 @@ function App() {
       <div>
 
         <Routes>
-          <Route exact path="/" element={isLoggedIn=="true"? <UserDetails /> : <Home />} />
+          <Route exact path="/Matchbox" element={isLoggedIn=="true"? <UserDetails /> : <Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/likes" element={<Likes />} />
           <Route path="/upload" element={<Upload />} />

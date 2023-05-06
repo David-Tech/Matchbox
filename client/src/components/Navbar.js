@@ -51,13 +51,13 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="leftSide" id={openLinks ? "open" : "close"}>
-        <Link className="navbar-brand" to={"/"}>
+        <Link className="navbar-brand" to={"/Matchbox"}>
           MatchBox
         </Link>
 
         {/* hamburger menu */}
         <div className="hiddenLinks">
-          <Link to="/" className="house-icon">
+          <Link to="/Matchbox" className="house-icon">
             <FontAwesomeIcon icon={faHouse} />
           </Link>
           <Link to="/likes" className="heart-icon">
@@ -74,7 +74,7 @@ function Navbar() {
 
       {/* links for navbar */}
       <div className="rightSide">
-        <Link to="/" className="house-icon">
+        <Link to="/Matchbox" className="house-icon">
           <FontAwesomeIcon icon={faHouse} /> Home{" "}
         </Link>
         <Link to="/likes" className="heart-icon">
