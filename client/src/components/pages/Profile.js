@@ -1,14 +1,22 @@
 import React, { useState } from 'react';
 import "../CSS/profile.css";
+
 function Profile() {
   return (
     <>
       <div className="profile-body">
         <h3>Interest</h3>
           <ul className ="prompts-body">
-            <li> What are your favorite hobbies? <input className="input-color input-field" placeholder="e.g: video games, reading, etc"></input></li> 
-        
-            <li>What is your favorite food or restaurant <input className="input-color input-field"></input></li>
+            <li> 
+              What is/are your favorite hobby or hobbies? 
+              <input className="input-color input-field input-tag" placeholder="e.g: video games, reading, etc"></input>
+            </li> 
+  
+            <li>
+              What is your favorite food or restaurant? 
+              <input className="input-color input-field input-tag "></input>
+            </li>
+
             <li></li>
           </ul>
 
@@ -25,9 +33,21 @@ function Profile() {
             </li>
             <li>
               How important is it to you that your partner has a certain level of education?  
-              <input className="input-color input-field"></input>
+              <label>
+                <input type="radio" name="education" value="important"/>important
+              </label>
+              <label>
+                <input type="radio" name="education" value="neutral"/>neutral
+              </label>
+              <label>
+                <input type="radio" name="education" value="not important"/>not important
+              </label>
             </li>
-            <li>Are there any political views that would be a deal breaker for you? <input className="input-color input-field"></input></li>
+
+            <li>
+              Are there any political views that would be a deal breaker for you? 
+              <input className="input-color input-field input-tag"></input>
+            </li>
           </ul>
       </div>
     </>
