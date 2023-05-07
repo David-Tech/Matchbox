@@ -39,7 +39,7 @@ export default class SignUp extends Component {
       return;
     }
 
-    fetch("http://localhost:5000/register", {
+    fetch("https://matchbox-dvq2.onrender.com/register", {
       method: "POST",
       crossDomain: true,
 

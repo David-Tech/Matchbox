@@ -8,7 +8,7 @@ constructor(props){
     };
 }
 componentDidMount(){
-    fetch("http://localhost:5000/userData",{
+    fetch("https://matchbox-dvq2.onrender.com/userData",{
         method: "POST",
         crossDomain: true,
         headers: {
@@ -28,7 +28,7 @@ componentDidMount(){
 
 logOut=()=>{
     window.localStorage.clear();
-    window.location.href="./";
+    window.location.href="./Matchbox";
 }
 
 
