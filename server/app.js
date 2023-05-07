@@ -31,7 +31,9 @@ require("./userDetails");
 
 const User = mongoose.model("UserInfo");
 
-
+app.get("/", (req, res) => {
+    res.send({ message: "Hello World!" });
+});
 
 app.post("/post", async(req,res) =>{
     console.log(req.body);
