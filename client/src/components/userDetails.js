@@ -28,7 +28,7 @@ componentDidMount(){
 
 logOut=()=>{
     window.localStorage.clear();
-    window.location.href="./Matchbox";
+    window.location.reload();
 }
 
 
