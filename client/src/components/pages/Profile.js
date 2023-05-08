@@ -24,7 +24,7 @@ function Profile() {
           <ul className ="prompts-body">
             <li>
               Are you looking for someone who wants kids in the future?      
-              <label>
+              <label className="radio">
                 <input type="radio" name="kids" value="yes"/>Yes
               </label>
               <label>
@@ -34,13 +34,13 @@ function Profile() {
             <li>
               How important is it to you that your partner has a certain level of education?  
               <label>
-                <input type="radio" name="education" value="important"/>important
+                <input type="radio" name="education" value="important"/> important
               </label>
               <label>
-                <input type="radio" name="education" value="neutral"/>neutral
+                <input type="radio" name="education" value="neutral"/> neutral
               </label>
               <label>
-                <input type="radio" name="education" value="not important"/>not important
+                <input type="radio" name="education" value="not important"/> not important
               </label>
             </li>
 
