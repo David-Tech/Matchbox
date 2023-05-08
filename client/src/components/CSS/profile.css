@@ -19,12 +19,18 @@
   width: 900px; /* added width to align inputs */
 }
 
-.prompts-body li input {
-  margin-left: 30px; /* adjusted margin */
+.prompts-body li label {
+  display: flex;
+  align-items: center;
+  }
+
+.prompts-body li label input {
+  display: inline-block;
+  width: 60px; 
 }
 
-.prompts-body .input-tag {
-  margin-left: 30px; /* adjust as needed */
+.prompts-body .input-tag {   /*for written response */
+  margin-left: 30px; 
 }
 
 
