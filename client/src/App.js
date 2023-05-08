@@ -26,17 +26,17 @@ function App() {
       <div>
 
         <Routes>
-          <Route exact path="./" element={isLoggedIn=="true"? <UserDetails /> : <Home />} />
-          <Route path="./home" element={<Home />} />
-          <Route path="./likes" element={<Likes />} />
-          <Route path="./upload" element={<Upload />} />
-          <Route path="./about" element={<About />} />
-          <Route path="./signup" element={<SignUp />} />
-          <Route path="./login" element={<Login />} />
-          <Route path="./profile/edit" element={<Profile />} />
-          <Route path="./profile/settings" element={<Settings />} />
+          <Route exact path="/Matchbox" element={isLoggedIn=="true"? <UserDetails /> : <Home />} />
+          <Route path="/Matchbox/Home" element={<Home />} />
+          <Route path="Matchbox/likes" element={<Likes />} />
+          <Route path="Matchbox/upload" element={<Upload />} />
+          <Route path="Matchbox/about" element={<About />} />
+          <Route path="Matchbox/signup" element={<SignUp />} />
+          <Route path="Matchbox/login" element={<Login />} />
+          <Route path="Matchbox/profile/edit" element={<Profile />} />
+          <Route path="Matchbox/profile/settings" element={<Settings />} />
 
-          <Route path="./userDetails" element={<UserDetails />} />
+          <Route path="Matchbox/userDetails" element={<UserDetails />} />
         </Routes>
 
       </div>

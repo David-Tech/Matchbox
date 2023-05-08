@@ -51,22 +51,22 @@ function Navbar() {
   return (
     <div className="navbar">
       <div className="leftSide" id={openLinks ? "open" : "close"}>
-        <Link className="navbar-brand" to={"./"}>
+        <Link className="navbar-brand" to={"/Matchbox"}>
           MatchBox
         </Link>
 
         {/* hamburger menu */}
         <div className="hiddenLinks">
-          <Link to="./" className="house-icon">
+          <Link to="/Matchbox" className="house-icon">
             <FontAwesomeIcon icon={faHouse} />
           </Link>
-          <Link to="./likes" className="heart-icon">
+          <Link to="Matchbox/likes" className="heart-icon">
             <FontAwesomeIcon icon={faHeart} />
           </Link>
-          <Link to="./upload" className="upload-icon">
+          <Link to="Matchbox/upload" className="upload-icon">
             <FontAwesomeIcon icon={faFileArrowUp} /> Upload{" "}
           </Link>
-          <Link to="./" className="profile-icon">
+          <Link to="/Matchbox" className="profile-icon">
             <FontAwesomeIcon icon={faUser} /> Profile{" "}
           </Link>
         </div>
@@ -74,13 +74,13 @@ function Navbar() {
 
       {/* links for navbar */}
       <div className="rightSide">
-        <Link to="./" className="house-icon">
+        <Link to="/Matchbox" className="house-icon">
           <FontAwesomeIcon icon={faHouse} /> Home{" "}
         </Link>
-        <Link to="./likes" className="heart-icon">
+        <Link to="Matchbox/likes" className="heart-icon">
           <FontAwesomeIcon icon={faHeart} /> Likes{" "}
         </Link>
-        <Link to="./upload" className="upload-icon">
+        <Link to="Matchbox/upload" className="upload-icon">
           <FontAwesomeIcon icon={faFileArrowUp} /> Upload{" "}
         </Link>
 
@@ -90,10 +90,10 @@ function Navbar() {
           <FontAwesomeIcon icon={faUser} /> Profile{" "}
           <FontAwesomeIcon icon={faCaretDown} />
           <div className="dropdown-content">
-            <Link to="./profile/edit">Edit Profile</Link>
-            <Link to="./profile/settings">Profile Settings</Link>
-            <Link to="./signup">Sign up</Link>
-            <Link to="./login">Login</Link>
+            <Link to="Matchbox/profile/edit">Edit Profile</Link>
+            <Link to="Matchbox/profile/settings">Profile Settings</Link>
+            <Link to="Matchbox/signup">Sign up</Link>
+            <Link to="Matchbox/login">Login</Link>
           </div>
         </div>
         
@@ -108,19 +108,19 @@ function Navbar() {
 
       {/* side menu */}
         <div className={`side-menu ${openLinks ? 'show' : ''}`}>
-          <Link to="./" className="menu-link" onClick={toggleNavbar}>
+          <Link to="/Matchbox" className="menu-link" onClick={toggleNavbar}>
             <FontAwesomeIcon icon={faHouse} /> Home
           </Link>
-          <Link to="./likes" className="menu-link" onClick={toggleNavbar}>
+          <Link to="Matchbox/likes" className="menu-link" onClick={toggleNavbar}>
             <FontAwesomeIcon icon={faHeart} /> Likes
           </Link>
-          <Link to="./upload" className="menu-link" onClick={toggleNavbar}>
+          <Link to="Matchbox/upload" className="menu-link" onClick={toggleNavbar}>
             <FontAwesomeIcon icon={faFileArrowUp} /> Upload
           </Link>
-          <Link to="./" className="menu-link" onClick={toggleNavbar}>
+          <Link to="/Matchbox" className="menu-link" onClick={toggleNavbar}>
             <FontAwesomeIcon icon={faUser} /> Profile
           </Link>
-          <Link to="./about" className="menu-link" onClick={toggleNavbar}>
+          <Link to="Matchbox/about" className="menu-link" onClick={toggleNavbar}>
             <FontAwesomeIcon icon={faCircleInfo} /> About
           </Link>
         </div>
