@@ -35,7 +35,7 @@ export default class Login extends Component {
       alert("login successful");
     window.localStorage.setItem("token", data.data);
     window.localStorage.setItem("loggedIn", true);
-    window.location.href="./Matchbox";
+    window.location.href="/Matchbox";
     }
     else{
       alert("Username or Password Incorrect!")
