@@ -5,7 +5,7 @@ function Profile() {
   return (
     <>
       <div className="profile-body">
-        <h3>Interest</h3>
+        <h3>Interests</h3>
           <ul className ="prompts-body">
             <li className="input-border"> 
               What is/are your favorite hobby or hobbies? 
