@@ -55,6 +55,11 @@ function Navbar() {
           MatchBox
         </Link>
 
+        {/* <Link to="/upload" className="upload-icon">
+            <FontAwesomeIcon icon={faFileArrowUp} /> Upload{" "}
+          </Link> */}
+
+
         {/* hamburger menu */}
         <div className="hiddenLinks">
           <Link to="/Matchbox" className="house-icon">
@@ -64,10 +69,11 @@ function Navbar() {
             <FontAwesomeIcon icon={faHeart} />
           </Link>
           <Link to="/upload" className="upload-icon">
-            <FontAwesomeIcon icon={faFileArrowUp} /> Upload{" "}
+            <FontAwesomeIcon icon={faFileArrowUp} />
           </Link>
+       
           <Link to="/" className="profile-icon">
-            <FontAwesomeIcon icon={faUser} /> Profile{" "}
+            <FontAwesomeIcon icon={faUser} /> 
           </Link>
         </div>
       </div>
@@ -87,24 +93,22 @@ function Navbar() {
         <div className="profile-icon dropdown"
           onClick={handleDropdownClick}
           ref={dropdownRef}>
-          <FontAwesomeIcon icon={faUser} /> Profile{" "}
+          <FontAwesomeIcon icon={faUser} /> Account{" "}
           <FontAwesomeIcon icon={faCaretDown} />
           <div className="dropdown-content">
-            <Link to="/profile/edit">Edit Profile</Link>
-            <Link to="/profile/settings">Profile Settings</Link>
+            {/* <Link to="/profile/edit">Edit Profile</Link> */}
+            <Link to="/profile">Profile</Link>
             <Link to="/signup">Sign up</Link>
             <Link to="/login">Login</Link>
+            <Link to="/profile/settings">Settings</Link>
           </div>
         </div>
         
-
         {/* <Link to="/about" className = "about-icon"><FontAwesomeIcon icon={faCircleInfo}/> About </Link> */}
     
-  
         <button onClick={toggleNavbar}>
          <FontAwesomeIcon className ="hamburger-icon" icon={faBars} /> 
         </button>
-
 
       {/* side menu */}
         <div className={`side-menu ${openLinks ? 'show' : ''}`}>
