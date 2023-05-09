@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom';
 import './CSS/login.css'
 
 export default class Login extends Component {
@@ -31,7 +32,7 @@ export default class Login extends Component {
   .then((data)=>{
     console.log(data, "userRegister");
     if(data.status=="ok"){
-      alert("login successfull");
+      alert("login successful");
     window.localStorage.setItem("token", data.data);
     window.localStorage.setItem("loggedIn", true);
     window.location.href="./UserDetails";
@@ -78,15 +79,14 @@ export default class Login extends Component {
           </div>
         </div>
 
-
-
         <div>
-          <button type="submit" className="">
-            Submit
-          </button>
+          <button className ="log-back-btn" >Back</button>
+
+          <button type="submit">Submit</button>
+
         </div>
         {/* <a href="#"> password?</a> */}
-        <p className="forgot-pwd"> Forgot <a href="#"> password?</a>
+        <p className="forgot-pwd"> Forgot <Link style={{ marginLeft: '.5rem' }}to="/"> password?</Link>
         </p>
       </form>
     )
