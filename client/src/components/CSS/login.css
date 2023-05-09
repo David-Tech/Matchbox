@@ -45,3 +45,16 @@
    color: black;
    margin: 10px;
  }
+
+
+ .pwd-eye-icon2{
+   position: absolute;
+   top: 32%;
+   margin-left: 122px;
+   margin-top: 4px;
+
+   /* right: 5px; */
+   /* transform: translateX(610%); */
+   cursor: pointer;
+   color: var(--prime-color);
+ }
