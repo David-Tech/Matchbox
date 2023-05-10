@@ -24,7 +24,6 @@ function App() {
     <Router>
       <Navbar/>
       <div>
-
         <Routes>
           <Route exact path="/Matchbox" element={isLoggedIn=="true"? <UserDetails /> : <Home />} />
           <Route path="/home" element={<Home />} />
@@ -34,11 +33,9 @@ function App() {
           <Route path="/signup" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/profile/edit" element={<Profile />} />
-          <Route path="/profile/settings" element={<Settings />} />
-
+          <Route path="/profile/settings" element={<Settings />} />g
           <Route path="/userDetails" element={<UserDetails />} />
         </Routes>
-
       </div>
     </Router>
   )

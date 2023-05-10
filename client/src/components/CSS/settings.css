@@ -38,7 +38,6 @@
  .sidebar .dropdown.shift-down {
   margin-top: 150px;
 }
-
  /* drop down menu links */
  .dropdown-menu li a{
    color: black;
@@ -66,6 +65,7 @@
    background-color: transparent;
    border: none;
    font-size: 16px;
+
  }
 
  .sidebar-btn:hover{
@@ -76,7 +76,8 @@
  .sidebar .dropdown button svg {
    margin-left: 5px;
  }
- 
+
+
  .sub-item:hover{
   color: var(--hover-color);
  }
