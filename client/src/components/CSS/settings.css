@@ -30,10 +30,14 @@
    /* background-color: var(--second-color); */
    margin-top: 0;
    margin-left: 0;
-   width: 40%;
+   width: 80%;
    display: none;
  }
 
+/* shifts drop down menu when the one above expands */
+ .sidebar .dropdown.shift-down {
+  margin-top: 150px;
+}
  /* drop down menu links */
  .dropdown-menu li a{
    color: black;
@@ -61,11 +65,19 @@
    background-color: transparent;
    border: none;
    font-size: 16px;
-   color: #000;
+
  }
+
+ .sidebar-btn:hover{
+  color: var(--hover-color);
+ }
+
  
  .sidebar .dropdown button svg {
    margin-left: 5px;
  }
 
- 
+
+ .sub-item:hover{
+  color: var(--hover-color);
+ }

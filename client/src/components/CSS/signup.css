@@ -20,7 +20,6 @@
   color: black;
   margin-left: -10px;
   /* margin: 10px; */
-
 }
  
 .sign-color:hover{
@@ -49,4 +48,14 @@
   transform: translateX(-130%);
   cursor: pointer;
   color: var(--prime-color);
+}
+
+.signup-input{
+  font-family: 'IBM Plex Mono', monospace;
+  margin-top: 15px;
+  font-size: 12px;
+  height: 30px;
+  width: 300px;
+  border-radius: 10px;
+  border: none;
 }

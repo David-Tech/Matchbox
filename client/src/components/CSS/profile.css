@@ -1,4 +1,56 @@
-.profile-body{
-   text-align: center;
-   
+.profile-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 60px;
+  color: var(--letter-color);
+}
+
+.prompts-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+}
+
+.prompts-body li {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 900px; /* added width to align inputs */
+}
+
+.prompts-body li label {
+  display: flex;
+  align-items: center;
+  }
+
+.prompts-body li label input {
+  display: inline-block;
+  width: 60px; 
+}
+
+.prompts-body .input-tag {   /*for written response */
+  margin-left: 30px; 
+}
+
+.input-field {
+  font-family: 'IBM Plex Mono', monospace;
+  border: none;
+  font-size: 14px;
+  height: 20px;
+  width: 300px;
+  color: var(--letter-color);
+  background-color:transparent;
+}
+ 
+.input-field:focus {
+  outline: none;
+}
+
+.input-border{
+  border: 2px solid var(--letter-color);
+  padding: 10px;
+  border-radius: 8px;
 }

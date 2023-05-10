@@ -16,6 +16,7 @@ import Profile from './components/pages/Profile';
 import Settings from './components/pages/Settings';
 import About from './components/pages/About';
 
+
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
   return (
@@ -24,7 +25,7 @@ function App() {
       <Navbar/>
       <div>
         <Routes>
-          <Route exact path="/" element={isLoggedIn=="true"? <UserDetails /> : <Home />} />
+          <Route exact path="/Matchbox" element={isLoggedIn=="true"? <UserDetails /> : <Home />} />
           <Route path="/home" element={<Home />} />
           <Route path="/likes" element={<Likes />} />
           <Route path="/upload" element={<Upload />} />
@@ -35,7 +36,6 @@ function App() {
           <Route path="/profile/settings" element={<Settings />} />g
           <Route path="/userDetails" element={<UserDetails />} />
         </Routes>
-
       </div>
     </Router>
   )
