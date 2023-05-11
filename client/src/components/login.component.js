@@ -19,7 +19,7 @@ export default class Login extends Component {
     const { email, password } = this.state;
     console.log(email, password);
 
-    fetch("http://localhost:5000/login-user", {
+    fetch("https://matchbox-dvq2.onrender.com/login-user",{
       method: "POST",
       crossDomain: true,
       headers: {
@@ -31,19 +31,19 @@ export default class Login extends Component {
         email,
         password,
       }),
-    })
-      .then((res) => res.json())
-      .then((data) => {
-        console.log(data, "userRegister");
-        if (data.status == "ok") {
-          alert("login successful");
-          window.localStorage.setItem("token", data.data);
-          window.localStorage.setItem("loggedIn", true);
-          window.location.href = "./UserDetails";
-        } else {
-          alert("Username or Password Incorrect!");
-        }
-      });
+  }).then((res)=>res.json())
+  .then((data)=>{
+    console.log(data, "userRegister");
+    if(data.status=="ok"){
+      alert("login successful");
+    window.localStorage.setItem("token", data.data);
+    window.localStorage.setItem("loggedIn", true);
+    window.location.href="/Matchbox";
+    }
+    else{
+      alert("Username or Password Incorrect!")
+    }
+  })
   }
 
   // define a method to toggle the password visibility
