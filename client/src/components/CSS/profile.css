@@ -38,10 +38,9 @@
 .input-field {
   font-family: 'IBM Plex Mono', monospace;
   border: none;
-  font-size: 14px;
+  font-size: 12px;
   height: 20px;
   width: 300px;
-  color: var(--letter-color);
   background-color:transparent;
 }
  
