@@ -63,7 +63,11 @@ function Profile() {
               <input className="input-color input-field input-tag"  placeholder= "e.g: Democratic, Republican, etc "></input>
             </li>
           </ul>
+
+          <button type="submit" className="">Sign Up</button>
+
       </div>
+
     </>
   );
 }
