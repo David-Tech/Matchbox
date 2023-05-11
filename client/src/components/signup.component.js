@@ -1,11 +1,12 @@
 import React, { Component, useState } from 'react'
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './CSS/signup.css'
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons"
 
 export default class SignUp extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
@@ -21,14 +22,7 @@ export default class SignUp extends Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-/* Handle Change not neeeded due to html input tag "min" parameter
-  handleChange = (e) => {
-    const regex = /^[0-9\b]+$/;
-    if (e.target.value === "" || regex.test(e.target.value)) {
-      this.setState({ age: e.target.value });
-    }
-  };
-*/
+
   handleSubmit(event) {
     event.preventDefault();
     const { age, fname, lname, email, password, verfiypwd } = this.state;
@@ -71,9 +65,10 @@ export default class SignUp extends Component {
     }));
   };
 
+  
   render() {
     const { age, showPassword, showVerifyPwd } = this.state; 
-
+    
     return (
       <form className="signup-form" onSubmit={this.handleSubmit}>
         <h3>Sign Up</h3>
@@ -146,11 +141,8 @@ export default class SignUp extends Component {
         </div>
 
         <div className="signup-buttons">
-          <button className ="back-button" >Back</button> 
-
-          <button type="submit" className="signup-button">
-            Sign Up
-          </button>
+          <button className="back-button" >Back</button>
+          <button type="submit" className="signup-button">Sign Up</button>
         </div>
         <p className="account-msg">
           Already have an account?{" "}

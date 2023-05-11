@@ -18,7 +18,7 @@
 .back-button{
   background-color: var(--prime-color);
   color: black;
-  margin-left: -10px;
+  /* margin-left: -10px; */
   /* margin: 10px; */
 }
  
