@@ -24,7 +24,6 @@ function App() {
     <Router>
       <Navbar/>
       <div>
-
         <Routes>
           <Route exact path="/Matchbox" element={isLoggedIn=="true"? <UserDetails /> : <Home />} />
           <Route path="/Matchbox/Home" element={<Home />} />

@@ -55,6 +55,11 @@ function Navbar() {
           MatchBox
         </Link>
 
+        {/* <Link to="/upload" className="upload-icon">
+            <FontAwesomeIcon icon={faFileArrowUp} /> Upload{" "}
+          </Link> */}
+
+
         {/* hamburger menu */}
         <div className="hiddenLinks">
           <Link to="/Matchbox" className="house-icon">
@@ -87,24 +92,22 @@ function Navbar() {
         <div className="profile-icon dropdown"
           onClick={handleDropdownClick}
           ref={dropdownRef}>
-          <FontAwesomeIcon icon={faUser} /> Profile{" "}
+          <FontAwesomeIcon icon={faUser} /> Account{" "}
           <FontAwesomeIcon icon={faCaretDown} />
           <div className="dropdown-content">
-            <Link to="Matchbox/profile/edit">Edit Profile</Link>
-            <Link to="Matchbox/profile/settings">Profile Settings</Link>
-            <Link to="Matchbox/signup">Sign up</Link>
-            <Link to="Matchbox/login">Login</Link>
+          <Link to="Matchbox/profile/edit">Edit Profile</Link>
+          <Link to="Matchbox/profile/settings">Profile Settings</Link>
+          <Link to="Matchbox/signup">Sign up</Link>
+          <Link to="Matchbox/login">Login</Link>
+
           </div>
         </div>
         
-
         {/* <Link to="/about" className = "about-icon"><FontAwesomeIcon icon={faCircleInfo}/> About </Link> */}
     
-  
         <button onClick={toggleNavbar}>
          <FontAwesomeIcon className ="hamburger-icon" icon={faBars} /> 
         </button>
-
 
       {/* side menu */}
         <div className={`side-menu ${openLinks ? 'show' : ''}`}>
