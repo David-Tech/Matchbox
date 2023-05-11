@@ -79,7 +79,7 @@ function Navbar() {
 
       {/* links for navbar */}
       <div className="rightSide">
-        <Link to="/Matchbox" className="house-icon">
+        <Link to="/Matchbox/Home" className="house-icon">
           <FontAwesomeIcon icon={faHouse} /> Home{" "}
         </Link>
         <Link to="Matchbox/likes" className="heart-icon">
