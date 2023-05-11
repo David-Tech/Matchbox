@@ -8,14 +8,12 @@ import {
   faHeart,
   faHouse,
   faUser,
-  faCircleInfo,
   faFileArrowUp,
   faCaretDown,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Navbar() {
   const [openLinks, setOpenLinks] = useState(false);
-  const [showMenu, setShowMenu] = useState(false);
   const dropdownRef = useRef(null);
 
   useEffect(() => {
@@ -41,24 +39,12 @@ function Navbar() {
     event.stopPropagation();
   };
 
-
-  // sidemenu
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
-
-
   return (
     <div className="navbar">
       <div className="leftSide" id={openLinks ? "open" : "close"}>
         <Link className="navbar-brand" to={"/Matchbox"}>
           MatchBox
         </Link>
-
-        {/* <Link to="/upload" className="upload-icon">
-            <FontAwesomeIcon icon={faFileArrowUp} /> Upload{" "}
-          </Link> */}
-
 
         {/* hamburger menu */}
         <div className="hiddenLinks">
@@ -108,25 +94,6 @@ function Navbar() {
         <button onClick={toggleNavbar}>
          <FontAwesomeIcon className ="hamburger-icon" icon={faBars} /> 
         </button>
-
-      {/* side menu */}
-        <div className={`side-menu ${openLinks ? 'show' : ''}`}>
-          <Link to="/Matchbox" className="menu-link" onClick={toggleNavbar}>
-            <FontAwesomeIcon icon={faHouse} /> Home
-          </Link>
-          <Link to="Matchbox/likes" className="menu-link" onClick={toggleNavbar}>
-            <FontAwesomeIcon icon={faHeart} /> Likes
-          </Link>
-          <Link to="Matchbox/upload" className="menu-link" onClick={toggleNavbar}>
-            <FontAwesomeIcon icon={faFileArrowUp} /> Upload
-          </Link>
-          <Link to="/Matchbox" className="menu-link" onClick={toggleNavbar}>
-            <FontAwesomeIcon icon={faUser} /> Profile
-          </Link>
-          <Link to="Matchbox/about" className="menu-link" onClick={toggleNavbar}>
-            <FontAwesomeIcon icon={faCircleInfo} /> About
-          </Link>
-        </div>
       </div>
 
     </div>
