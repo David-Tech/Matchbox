@@ -32,8 +32,8 @@ function App() {
           <Route path="Matchbox/about" element={<About />} />
           <Route path="Matchbox/signup" element={<SignUp />} />
           <Route path="Matchbox/login" element={<Login />} />
-          <Route path="Matchbox/profile/edit" element={<Profile />} />
-          <Route path="Matchbox/profile/settings" element={<Settings />} />
+          <Route path="Matchbox/profile" element={<Profile />} />
+          <Route path="Matchbox/settings" element={<Settings />} />
 
           <Route path="Matchbox/userDetails" element={<UserDetails />} />
         </Routes>
