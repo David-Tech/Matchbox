@@ -37,7 +37,6 @@ function App() {
 
           <Route path="Matchbox/userDetails" element={<UserDetails />} />
         </Routes>
-
       </div>
     </Router>
   )

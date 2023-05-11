@@ -4,12 +4,14 @@
   justify-content: center;
   align-items: center;
   margin-top: 60px;
+  color: var(--letter-color);
 }
 
 .prompts-body {
   display: flex;
   flex-direction: column;
   align-items: center;
+ 
 }
 
 .prompts-body li {
@@ -19,21 +21,36 @@
   width: 900px; /* added width to align inputs */
 }
 
-.prompts-body li input {
-  margin-left: 30px; /* adjusted margin */
+.prompts-body li label {
+  display: flex;
+  align-items: center;
+  }
+
+.prompts-body li label input {
+  display: inline-block;
+  width: 60px; 
 }
 
-.prompts-body .input-tag {
-  margin-left: 30px; /* adjust as needed */
+.prompts-body .input-tag {   /*for written response */
+  margin-left: 30px; 
 }
-
 
 .input-field {
   font-family: 'IBM Plex Mono', monospace;
-  border-radius: 10px;
   border: none;
-  font-size: 12px;
+  font-size: 14px;
   height: 20px;
   width: 300px;
+  color: var(--letter-color);
+  background-color:transparent;
 }
  
+.input-field:focus {
+  outline: none;
+}
+
+.input-border{
+  border: 2px solid var(--letter-color);
+  padding: 10px;
+  border-radius: 8px;
+}
