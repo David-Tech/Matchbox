@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import './CSS/userDetails.css'
 
 export default class UserDetails extends Component {
 constructor(props){
@@ -32,15 +33,19 @@ logOut=()=>{
 }
 
 
-    render() {
-        return (
+render() {
+    return (
+        <div className="body-home">
+            {/* Name<h1>{this.state.userData.fname}</h1>
+            Email<h1>{this.state.userData.email}</h1>  */}
             <div>
-                Name<h1>{this.state.userData.fname}</h1>
-                Email<h1>{this.state.userData.email}</h1> 
-                <br />
-                <button onClick={this.logOut} className="btn btn-primary">Log Out</button>
+                There are 0 matches. 
             </div>
-        );
-        }
+            <br />
+            <button onClick={this.logOut} >Log Out</button>
+        </div>
 
+        
+    );
+}
 }
