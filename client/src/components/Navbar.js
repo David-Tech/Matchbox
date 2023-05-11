@@ -81,10 +81,10 @@ function Navbar() {
           <FontAwesomeIcon icon={faUser} /> Account{" "}
           <FontAwesomeIcon icon={faCaretDown} />
           <div className="dropdown-content">
-          <Link to="Matchbox/profile/edit">Profile</Link>
+          <Link to="Matchbox/profile">Profile</Link>
           <Link to="Matchbox/signup">Sign up</Link>
           <Link to="Matchbox/login">Login</Link>
-          <Link to="Matchbox/profile/settings">Settings</Link>
+          <Link to="Matchbox/settings">Settings</Link>
 
           </div>
         </div>
