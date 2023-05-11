@@ -46,9 +46,7 @@ function Settings() {
             <li>
               <a href="#" className ="sub-item">Billing</a>
             </li>
-            <li>
-              <a href="#" className ="sub-item">Billing</a>
-            </li>
+    
           </ul>
         </li>
       </ul>
