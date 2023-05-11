@@ -43,14 +43,20 @@ render() {
             </div>
 
             {/* for user matches */}
-            <div className="match1"></div>
-            <div className="match2"></div>
+            <div className="match-feed">
+                <div className="match1">
+                    Name<h1>{this.state.userData.fname}</h1>
+                    
+                    Email<h1>{this.state.userData.email}</h1> 
+                </div>
+                <div className="match2"></div>
+            </div>
+    
 
             <br />
             <button onClick={this.logOut} >Log Out</button>
-        </div>
 
-        
+        </div>
     );
 }
 }

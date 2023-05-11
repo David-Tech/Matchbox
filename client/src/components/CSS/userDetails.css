@@ -2,8 +2,6 @@
    text-align: center;
 }
 
-
-
 .match1{
    background-color: var(--letter-color);
    width: 300px;
@@ -13,7 +11,9 @@
    top: 50%;
    left: 50%;
    display: flex;
-   transform: translate(-200%, -100%);
+   transform: translate(-200%, -100%);  /* translate
+   (x,y) */
+   color: black;
  }
 
 
@@ -26,6 +26,7 @@
    top: 50%;
    left: 50%;
    display: flex;
-   transform: translate(-200%, 10%);
-
+   transform: translate(-200%, 10%);  /* translate(x,y) */
+   color: black;
+  
 }
