@@ -49,7 +49,7 @@
 }
 
 .input-border{
-  border: 2px solid var(--letter-color);
+  border: 1.5px solid rgba(255, 255, 255, 0.344);
   padding: 10px;
   border-radius: 8px;
 }

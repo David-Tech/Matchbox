@@ -17,7 +17,21 @@ function Profile() {
               <input className="input-color input-field input-tag " placeholder= "e.g: Indian, Chick-Fil-a, etc "></input>
             </li>
 
-            <li></li>
+            <li className="input-border">
+              What gender are you attracted to?      
+              <label className="radio">
+                <input type="radio" name="attract" value="Male"/>Male
+              </label>
+              <label>
+                <input type="radio" name="attract" value="Female"/>Female
+              </label>
+              <label>
+                <input type="radio" name="attract" value="Nonbinary"/>Nonbinary
+              </label>
+              <label>
+                <input type="radio" name="attract" value="Other"/>Other
+              </label>
+            </li>
           </ul>
 
         <h3>Dealbreakers</h3>
