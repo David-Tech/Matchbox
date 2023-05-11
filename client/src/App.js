@@ -1,9 +1,6 @@
 import React from 'react'
-import './components/CSS/App.css'
-import { Link } from 'react-router-dom';
-
-
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import './components/CSS/App.css'
 
 import Navbar from './components/Navbar'
 import Login from './components/login.component'
@@ -15,7 +12,6 @@ import Upload from './components/pages/Upload';
 import Profile from './components/pages/Profile';
 import Settings from './components/pages/Settings';
 import About from './components/pages/About';
-
 
 function App() {
   const isLoggedIn = window.localStorage.getItem("loggedIn");
