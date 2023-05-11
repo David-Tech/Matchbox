@@ -41,6 +41,11 @@ render() {
             <div>
                 There are 0 matches. 
             </div>
+
+            {/* for user matches */}
+            <div className="match1"></div>
+            <div className="match2"></div>
+
             <br />
             <button onClick={this.logOut} >Log Out</button>
         </div>
