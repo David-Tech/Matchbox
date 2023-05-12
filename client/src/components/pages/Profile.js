@@ -45,11 +45,14 @@ function Profile() {
                 <input type="radio" name="kids" value="no"/>No
               </label>
             </li>
+
             <li className="input-border">
               How important is it to you that your partner has a certain level of education?  
               <label>
                 <input type="radio" name="education" value="important"/> Important
+
               </label>
+
               <label>
                 <input type="radio" name="education" value="neutral"/> Neutral
               </label>
