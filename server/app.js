@@ -7,6 +7,8 @@ app.use(cors());
 const bcrypt=require("bcryptjs");
 const req = require("express/lib/request");
 const res = require("express/lib/response");
+app.use(express.json()); //express feature that changes parses json files 
+
 
 const jwt=require("jsonwebtoken");
 
@@ -50,6 +52,13 @@ app.post("/post", async(req,res) =>{
     }
 });
 
+app.get("/getUsers", async(req,res) =>{//api call to get all users from the mongoose database
+    User.find().then(function(response){
+        res.json(response);
+    }).catch(function(e){
+        res.json({message: e.message});
+    });
+});
 
 app.post("/register", async(req,res)=>{ //api call to create a user in the mongoose database
     const{age, fname, lname, email, password, verifypwd} = req.body;

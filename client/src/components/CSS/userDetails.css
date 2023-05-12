@@ -15,6 +15,51 @@
    color: black;
  }
 
+ .match{
+   background-color: #75684a;
+   margin: 2%;
+   border-radius: 20px;
+   padding: 12px;
+   display: grid;
+   grid-template-columns: 50% 50%;
+ }
+
+ /*create hover feature for className match gets larger on hover*/
+   .match:hover{
+      background-color: #a18d6c;
+      cursor: pointer;
+      transform: scale(1.1);
+      transition: transform 0.5s;
+   }
+
+   .match .square{ /*this is a template image for the match*/
+      width: 200px;
+      height: 200px;
+      background-color: #ffffff;
+      border-radius: 20px;
+      margin: 0 auto;
+   }
+
+   .match .remove{
+      /*red x to remove match*/
+      width: 50px;
+      height: 50px;
+      background-color: #ff0000;
+      border-radius: 50%;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+   }
+
+   .match .matchText{
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      color: #ffffff;
+      margin: 0 auto;
+      text-align: left;
+      width: 100%;
+   }
 
 .match2{
    background-color: var(--letter-color);
