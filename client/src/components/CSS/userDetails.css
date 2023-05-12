@@ -11,8 +11,7 @@
    top: 50%;
    left: 50%;
    display: flex;
-   transform: translate(-200%, -100%);  /* translate
-   (x,y) */
+   transform: translate(-200%, -100%);  /* translate(x,y) */
    color: black;
  }
 

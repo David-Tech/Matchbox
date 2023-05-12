@@ -22,12 +22,15 @@ function Profile() {
               <label className="radio">
                 <input type="radio" name="attract" value="Male"/>Male
               </label>
+
               <label>
                 <input type="radio" name="attract" value="Female"/>Female
               </label>
+
               <label>
                 <input type="radio" name="attract" value="Nonbinary"/>Nonbinary
               </label>
+
               <label>
                 <input type="radio" name="attract" value="Other"/>Other
               </label>
@@ -41,6 +44,7 @@ function Profile() {
               <label className="radio">
                 <input type="radio" name="kids" value="yes"/>Yes
               </label>
+
               <label>
                 <input type="radio" name="kids" value="no"/>No
               </label>
@@ -50,12 +54,12 @@ function Profile() {
               How important is it to you that your partner has a certain level of education?  
               <label>
                 <input type="radio" name="education" value="important"/> Important
-
               </label>
 
               <label>
                 <input type="radio" name="education" value="neutral"/> Neutral
               </label>
+
               <label>
                 <input type="radio" name="education" value="not important"/> Not important
               </label>
@@ -67,13 +71,11 @@ function Profile() {
             </li>
           </ul>
 
-          <button type="submit" className="">Sign Up</button>
-
+          <button type="submit" className="submit-btn">Submit</button>
+          <button type="reset" className="reset-btn">Clear</button>
       </div>
-
     </>
   );
 }
-
 
 export default Profile;
