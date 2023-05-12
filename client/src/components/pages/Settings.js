@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import '../CSS/settings.css';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretDown,  faUser } from '@fortawesome/free-solid-svg-icons';
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons';
 
 function Settings() {
   const [isOpen, setIsOpen] = useState(false);
@@ -48,6 +48,7 @@ function Settings() {
             </li>
     
           </ul>
+
         </li>
       </ul>
     </div>
@@ -55,4 +56,3 @@ function Settings() {
 }
 
 export default Settings;
-
