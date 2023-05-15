@@ -54,7 +54,7 @@ export default class SignUp extends Component {
       .then((res) => res.json())
       .then((data) => {
         console.log(data, "userRegister");
-        window.location.href="/login";
+        window.location.href="./Matchbox/login";
       });
   }
 
